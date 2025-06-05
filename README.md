@@ -1,7 +1,7 @@
 ## Created three different workspaces for dev (Frankfurt : eu-central-1), staging (Canada : ca-central-1) and prod (Singapore : ap-southeast-1) environment in different regions
 
 ## 1. dev environment
-terraform workspace new dev      # Create dev workspace
+terraform workspace new dev  \n
 terraform init                   # Initialize Terraform
 terraform plan -var-file="dev.tfvars"
 terraform apply -var-file="dev.tfvars"

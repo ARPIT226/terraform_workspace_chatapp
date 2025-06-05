@@ -1,14 +1,14 @@
-## Workspace-Based Multi-Environment Terraform Deployment
+# Terraform Multi-Environment Setup
 
-Created three different workspaces for `dev`, `staging`, and `prod` environments targeting different AWS regions.
+This repository manages infrastructure using Terraform across three environments — dev, staging, and production — each in a different AWS region. Workspaces are used to separate environments cleanly.
 
-### Dev Environment (Frankfurt - eu-central-1)
+## Setup Instructions
+
+### 1. Development Environment (Region: Frankfurt - eu-central-1)
 ```bash
-terraform workspace new dev
-terraform init
-terraform plan -var-file="dev.tfvars"
-terraform apply -var-file="dev.tfvars" ```
+terraform workspace new dev          # Create 'dev' workspace
+terraform init                       # Initialize Terraform
+terraform plan -var-file="dev.tfvars"        # Review plan for dev
+terraform apply -var-file="dev.tfvars"       # Apply changes for dev
 
-<img width="325" alt="dev workspace screenshot" src="https://github.com/user-attachments/assets/15d3f8ea-e74f-4465-9e46-b4b460abb6f9" /> 
-
-### Staging Environment (Canada - ca-central-1)
+<img width="325" alt="image" src="https://github.com/user-attachments/assets/15d3f8ea-e74f-4465-9e46-b4b460abb6f9" />
